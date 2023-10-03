@@ -29,5 +29,19 @@ public class StepDefinitions {
 //	    throw new io.cucumber.java.PendingException();
 		System.out.println("Cards are displayed");
 	}
+//	@When("User login into application with {string} and password {string}")
+//	public void user_login_into_application_with_and_password(String string, String string2) {
+//	    // Write code here that turns the phrase above into concrete actions
+////	    throw new io.cucumber.java.PendingException();
+//		System.out.println("User Login with Following Credentials: "+string+" "+"User Password: "+string2);
+//	}
+	@When("^User login into application with (.+) and password (.+)$")
+	public void user_login_into_application_with_and_password(String string, String string2) {
+	    // Write code here that turns the phrase above into concrete actions
+//	    throw new io.cucumber.java.PendingException();
+		System.out.println("User Login with Following Credentials: "+string+" "+"User Password: "+string2);
+	}
+
+
 
 }
