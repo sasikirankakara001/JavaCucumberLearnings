@@ -2,6 +2,8 @@ package stepDefinitions;
 
 import java.util.List;
 
+import org.testng.Assert;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -47,6 +49,7 @@ public class StepDefinitions {
 	public void user_is_on_practice_landing_page() {
 	    // Write code here that turns the phrase above into concrete actions
 //	    throw new io.cucumber.java.PendingException();
+//		Assert.assertTrue(false);
 	}
 
 	@When("^User Signup into application$")

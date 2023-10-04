@@ -9,7 +9,7 @@ Then Home Page is displayed
 And Cards are displayed
 
 #Reusable
-@RegressionTest
+@RegressionTest @NetBanking
 Scenario: User Page default login
 
 Given User is on NetBanking landing page
@@ -17,8 +17,8 @@ When User login into application with "user" and password "user@123"
 Then Home Page is displayed
 And Cards are displayed
 
-@SmokeTest @RegressionTest
-Scenario Outline: User Page default login
+@SmokeTest @RegressionTest @Mortgage
+Scenario Outline: Mortgage User Page default login
 
 Given User is on NetBanking landing page
 When User login into application with "<user>" and password "<password>"
