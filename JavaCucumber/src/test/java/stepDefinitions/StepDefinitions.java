@@ -1,5 +1,7 @@
 package stepDefinitions;
 
+import java.util.List;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -41,6 +43,28 @@ public class StepDefinitions {
 //	    throw new io.cucumber.java.PendingException();
 		System.out.println("User Login with Following Credentials: "+string+" "+"User Password: "+string2);
 	}
+	@Given("User is on Practice landing page")
+	public void user_is_on_practice_landing_page() {
+	    // Write code here that turns the phrase above into concrete actions
+//	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("^User Signup into application$")
+	public void user_signup_into_application(List<String>data) {
+	    // Write code here that turns the phrase above into concrete actions
+	    // For automatic transformation, change DataTable to one of
+	    // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
+	    // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
+	    // Double, Byte, Short, Long, BigInteger or BigDecimal.
+	    //
+	    // For other transformations you can register a DataTableType.
+//	    throw new io.cucumber.java.PendingException();
+		System.out.println(data.get(0));
+		System.out.println(data.get(1));
+	}
+
+
+
 
 
 
