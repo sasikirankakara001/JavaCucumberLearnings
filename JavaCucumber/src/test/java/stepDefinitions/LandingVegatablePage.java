@@ -12,11 +12,15 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import pageObjects.LandingVegetablePage;
 import utils.TextContent;
 
 public class LandingVegatablePage {
 	
+	
+	
 	TextContent textContent;
+	public static LandingVegetablePage landingVegetablePage = new LandingVegetablePage(TextContent.driver);
 	public LandingVegatablePage(TextContent textContent) {
 		this.textContent = textContent;
 	}
@@ -35,7 +39,10 @@ public class LandingVegatablePage {
 	public void user_enters_word_in_search_and_grab_the_name(String string) {
 		// Write code here that turns the phrase above into concrete actions
 //	    throw new io.cucumber.java.PendingException();
-		textContent.driver.findElement(By.cssSelector("input[placeholder=\"Search for Vegetables and Fruits\"]")).sendKeys(string);
+//		textContent.driver.findElement(By.cssSelector("input[placeholder=\"Search for Vegetables and Fruits\"]")).sendKeys(string);
+		
+//		landingVegetablePage.searchContent(string);
+		landingVegetablePage.searchOpertation(string);
 		
 		
 	}
