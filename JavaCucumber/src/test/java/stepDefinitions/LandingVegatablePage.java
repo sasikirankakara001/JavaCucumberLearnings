@@ -13,6 +13,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pageObjects.LandingVegetablePage;
+import pageObjects.PageObject;
 import utils.TextContent;
 
 public class LandingVegatablePage {
@@ -20,6 +21,7 @@ public class LandingVegatablePage {
 	
 	
 	TextContent textContent;
+	PageObject pageObject = new PageObject(TextContent.driver);
 	public static LandingVegetablePage landingVegetablePage = new LandingVegetablePage(TextContent.driver);
 	public LandingVegatablePage(TextContent textContent) {
 		this.textContent = textContent;
@@ -42,7 +44,9 @@ public class LandingVegatablePage {
 //		textContent.driver.findElement(By.cssSelector("input[placeholder=\"Search for Vegetables and Fruits\"]")).sendKeys(string);
 		
 //		landingVegetablePage.searchContent(string);
+//		landingVegetablePage.searchOpertation(string);
 		landingVegetablePage.searchOpertation(string);
+		
 		
 		
 	}

@@ -13,10 +13,14 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pageObjects.OffersVegetablePage2;
+import pageObjects.PageObject;
 import utils.TextContent;
 
 public class OffersVegatablePage2 {
-	public static OffersVegetablePage2 offersVegetablePage2 = new OffersVegetablePage2(TextContent.driver);
+
+	public PageObject pageObject = new PageObject(TextContent.driver);
+//	public static OffersVegetablePage2 offersVegetablePage2 = new OffersVegetablePage2(TextContent.driver);
+//	public PageObject pageObject = new PageObject(TextContent.driver);
 	TextContent textContent;
 
 	public OffersVegatablePage2(TextContent textContent) {
@@ -43,7 +47,8 @@ public class OffersVegatablePage2 {
 //	}
 	public void newMethodImplement() {
 //		textContent.driver.findElement(By.xpath("//a[normalize-space()=\"Top Deals\"]")).click();
-		offersVegetablePage2.searchOpertation();
+		pageObject.offersVegetablePage22().searchOpertation();
+//		pageObject.offersVegetablePage2.searchOpertation();
 		Set<String> handles = textContent.driver.getWindowHandles();
 		Iterator<String> it = handles.iterator();
 		String parentId = it.next();
@@ -58,14 +63,18 @@ public class OffersVegatablePage2 {
 //	    throw new io.cucumber.java.PendingException();
 //		String vegName = textContent.driver.findElement(By.xpath("//h4[normalize-space()=\"Tomato - 1 Kg\"]")).getText()
 //				.split("-")[0].trim();
-		offersVegetablePage2.getVegName();
+		pageObject.offersVegetablePage22().getVegName();
+//		pageObject.offersVegetablePage2.getVegName();
 //		System.out.println(vegName);
 		newMethodImplement();
 		System.out.println(textContent.driver.getCurrentUrl());
 //		textContent.driver.findElement(By.cssSelector("#search-field")).sendKeys(string);
-		offersVegetablePage2.searchField(string);
+		pageObject.offersVegetablePage22().searchField(string);
+//		pageObject.offersVegetablePage2.searchField(string);
 //	String testVegName	=textContent.driver.findElement(By.xpath("//td[normalize-space()=\"Tomato\"]")).getText().split(" ")[0].trim();
-		offersVegetablePage2.testVegsName();
+		pageObject.offersVegetablePage22().testVegsName();
+//		pageObject.offersVegetablePage2.testVegsName();
+		
 
 	}
 
